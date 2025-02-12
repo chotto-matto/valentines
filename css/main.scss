@@ -233,3 +233,20 @@ p {
     background: #0094c6;
     color: white;
 }
+
+#mute-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#mute-btn:hover {
+    background: rgba(255, 255, 255, 1);
+}

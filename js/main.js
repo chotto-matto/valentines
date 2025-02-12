@@ -16,3 +16,24 @@ setInterval(createHeart, 300);
 function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+const music = document.getElementById('bg-music');
+const muteBtn = document.getElementById('mute-btn');
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        muteBtn.textContent = "🔊";
+    } else {
+        music.pause();
+        muteBtn.textContent = "🔇";
+    }
+}
+
+// Autoplay when the page loads
+window.addEventListener('load', () => {
+    music.volume = 0.5; // Adjust volume
+    music.play().catch(() => {
+        // Handle autoplay restrictions (if any)
+        muteBtn.textContent = "🔇";
+    });
+});
